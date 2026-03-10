@@ -1,0 +1,42 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2026-03-09T18:58:57-07:00",
+    "name": "Ollama",
+    "author": "sinaloensemel@gmail.com",
+    "description": "Ollama egg",
+    "features": [],
+    "docker_images": {
+        "Ollama": "ghcr.io\/sinaloense\/pterodactyl-ollama:latest"
+    },
+    "file_denylist": [],
+    "startup": "ollama serve",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"Listening on\"\r\n}",
+        "logs": "{}",
+        "stop": "^C & ^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/bash\r\n# Cloudflared Installation Script\r\n#",
+            "container": "debian:bookworm-slim",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "OLLAMA_MODEL",
+            "description": "",
+            "env_variable": "OLLAMA_MODEL",
+            "default_value": "qwen2.5:0.5b",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:100",
+            "field_type": "text"
+        }
+    ]
+}
